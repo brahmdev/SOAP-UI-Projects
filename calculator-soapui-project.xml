@@ -626,7 +626,7 @@
 // then uncomment lines 5 to 10
 
 // filePath = 'C:\\tempOutputDirectory\\'
-// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true) added for testing
 // pw = new PrintWriter(fos)
 // testStepResult.writeTo(pw)
 // pw.close()
