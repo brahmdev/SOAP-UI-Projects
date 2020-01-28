@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ee534bda-5fd2-4251-ae08-785ff64b9ec9" created="3.0.0" activeEnvironment="Default environment" name="test-test-soapui-project" resourceRoot="" updated="3.0.0 2019-11-05T14:42:03Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="b19e22bb-4f76-4117-9a61-3d9474060b7d" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8090" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8090</con:endpoint></con:endpoints><con:resource name="" path="" id="f650a06f-3e2f-4372-ab0c-939098343f5f"><con:settings/><con:parameters/><con:method name="" id="7cd6c743-3fe4-4996-addd-e648fd77cb29" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="da523ef3-07d3-4a6b-a6ed-bc831174b286" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8090</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="0f873d4b-37e8-48c0-8296-31df109691f4" name="http://localhost:8090 TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="3c3a11a4-9a8a-438f-888a-fbb793156e36" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://localhost:8090 TestCase 1" searchProperties="true" timeout="0"><con:settings/><con:testStep type="restrequest" name="Request 1" id="f717b6b1-ed32-4c4f-a4bc-976baa70649b"><con:settings/><con:config service="http://localhost:8090" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="da523ef3-07d3-4a6b-a6ed-bc831174b286" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="2d214d67-f012-44cf-9c96-06a15d8c6d49" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="f543004a-761c-4e4f-b935-133c767827bf" name="Response SLA"><con:configuration><SLA>200</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/></con:soapui-project>
